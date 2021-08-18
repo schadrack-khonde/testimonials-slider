@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root{
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+    --font-family: 'Inter', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 32px;
+}
+body{
+    font-family: var(--font-family);
+}
+p{
+    color: var(--Dark-Blue);
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+h3{
+    color: var(--Dark-Blue);
+    font-weight: 700;
+    font-size: 0.6rem;
+}
+h4{
+    color: var(--Grayish-Blue);
+    font-weight: 300;
+    font-size: 0.6rem;
+}
+section{
+    width: 100%;
+    height: 100%;
+}
+
+.testimonies{
+    display: flex;
+    flex-direction: column;
+}
+/*image-container*/
+#image-container{
+    background-image: url("./images/pattern-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 2.3rem;
+}
+
+.profile-container{
+    width: 78%;
+    margin: auto;
+}
+#profile{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.prev_next{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: max-content;
+    margin: auto;
+    border-radius: 50px;
+    position: relative;
+    bottom: 1.2rem;
+    z-index: 99;
+}
+
+.prev_next img{
+    padding: 0.5rem;
+}
+#next{
+    padding-left: 1rem;
+}
+
+.prev_next img{
+    cursor: pointer;
+}
+
+/*te.tex-container*/
+.tex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#quote{
+    position: relative;
+    top: 1.2rem;
+}
+#quote img{
+    width: 2.3rem;
+}
+.name_job{
+    margin: 0.8rem 0 1rem 0;
+}
+
+.pattern-curve{
+    width: 100%;
+    height: 100%;
+}
+.pattern-curve img{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media  only screen and (min-width:800px) {
+    /*touch*/
+    .testimonies{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        margin: 0 auto;
+        width: 85%;
+        padding-top: 2rem;
+    }
+    /*image-container*/
+    #image-container{
+        flex: 0.5;
+        position: relative;
+        right: 2rem;
+    }
+    #text{
+        flex: 0.5;
+        position: relative;
+        left: 2rem;
+    }
+    .prev_next{
+        position: relative;
+        bottom: 1.2rem;
+        right: 3rem;
+    }
+    
+    
+    /*te.tex-container*/
+    .tex-container{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    .tex-container p {
+        font-size: 0.9rem;
+    }
+    #quote{
+        position: relative;
+        top: 1rem;
+        right: 5rem;
+    }
+    #quote img{
+        width: 3rem;
+    }
+    .name_job{
+        margin: 0.8rem 0 1rem 0;
+        display: inline-flex;
+    }
+    #name{
+        padding-right: 7px;
+    }
+    
+    .pattern-curve{
+        width: 50%;
+        height: 20vh;
+    }
+}
